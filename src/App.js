@@ -11,7 +11,7 @@ import BlogPage from "./components/BlogPage";
 import WorkPage from "./components/WorkPage";
 import MySkillsPage from "./components/MySkillsPage";
 // import SoundBar from "./subComponents/SoundBar";
-
+// chnages
 function App() {
   const location = useLocation();
   return (
