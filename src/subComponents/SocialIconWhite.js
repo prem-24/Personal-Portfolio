@@ -1,11 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Behance, Upwork, Dribble,Linkedin } from "../components/AllSvgs";
-import '../components/AllSvg.css'
+import {
+  Github,
+  Behance,
+  Upwork,
+  Dribble,
+  Linkedin,
+} from "../components/AllSvgs";
+import "../components/AllSvg.css";
 const Icons = {
   display: "flex",
   flexDirection: "column",
-  gap:"10px",
+  gap: "10px",
   alignItems: "center",
   position: "fixed",
   bottom: "0px",
@@ -17,14 +23,19 @@ const Line = () => {
   const lineStyle = {
     width: "3px",
     height: "50px",
-    backgroundColor:"white"
+    backgroundColor: "white",
   };
-  return<motion.span style={lineStyle} initial={{ scale: 0 }}
-  animate={{ scale: [0, 1, 1.5, 1] }}
-  transition={{ type: "spring", duration: 0.5, delay: 1 }}></motion.span>;
+  return (
+    <motion.span
+      style={lineStyle}
+      initial={{ scale: 0 }}
+      animate={{ scale: [0, 1, 1.5, 1] }}
+      transition={{ type: "spring", duration: 0.5, delay: 1 }}
+    ></motion.span>
+  );
 };
 
-const SocialIcons = ({  color }) => {
+const SocialIcons = ({ color }) => {
   return (
     <div style={Icons}>
       <motion.div
@@ -46,7 +57,9 @@ const SocialIcons = ({  color }) => {
       >
         <div
           style={{ color: "inherit", cursor: "pointer" }}
-          onClick={() => window.open("https://www.behance.net/premprem36", "_blank")}
+          onClick={() =>
+            window.open("https://www.behance.net/premprem36", "_blank")
+          }
         >
           <Behance color={color} />
         </div>
@@ -59,7 +72,10 @@ const SocialIcons = ({  color }) => {
         <div
           style={{ color: "inherit", cursor: "pointer" }}
           onClick={() =>
-            window.open("https://www.upwork.com/freelancers/~0153c37031a94b8d24", "_blank")
+            window.open(
+              "https://www.upwork.com/freelancers/~0153c37031a94b8d24",
+              "_blank"
+            )
           }
         >
           <Upwork color={color} />
@@ -72,7 +88,9 @@ const SocialIcons = ({  color }) => {
       >
         <div
           style={{ color: "inherit", cursor: "pointer" }}
-          onClick={() => window.open("https://dribbble.com/prem123423", "_blank")}
+          onClick={() =>
+            window.open("https://dribbble.com/prem123423", "_blank")
+          }
         >
           <Dribble color={color} />
         </div>
@@ -84,13 +102,15 @@ const SocialIcons = ({  color }) => {
       >
         <div
           style={{ color: "inherit", cursor: "pointer" }}
-          onClick={() => window.open("https://dribbble.com/prem123423", "_blank")}
+          onClick={() =>
+            window.open("https://dribbble.com/prem123423", "_blank")
+          }
         >
           <Linkedin color={color} />
         </div>
       </motion.div>
 
-      <Line  />
+      <Line />
     </div>
   );
 };
