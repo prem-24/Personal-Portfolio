@@ -1,0 +1,38 @@
+.dark{
+    display: flex;
+    font-size: 24px;
+    color: #302E31;
+    padding: 0.3rem;
+border-radius: 50%;
+/* border: 2px solid #555555; */
+width: 2rem;
+height: 2rem;
+}
+.dark:hover{
+
+    background-color: #FFAB90;
+    box-shadow: 0 0 8px 6px #EB5829;
+
+
+}
+
+.light{
+    display: flex;
+    font-size: 28px;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 0.3rem;
+/* border: 2px solid #555555; */
+width: 2.2rem;
+height: 2.2rem;
+    /* background-color: #FCF6F4; */
+
+}
+
+.light:hover{
+
+        background-color: #FFAB90;
+        box-shadow: 0 0 8px 6px #EB5829;
+  
+    
+}
