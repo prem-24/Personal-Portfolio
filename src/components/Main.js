@@ -58,6 +58,35 @@ const WORK = styled(NavLink)`
   z-index: 1;
 `;
 
+
+// const RESUME = styled(NavLink)`
+//   
+
+  
+// `;
+
+// const RESUME = styled(NavLink)`
+// color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+//   position: absolute;
+//   top: 30%;
+//   left: calc(1rem + 2vw);
+//   transform: translate(-50%, -50%) rotate(-90deg);
+//   text-decoration: none;
+//   z-index: 1;
+// `;
+const RESUME = styled(NavLink)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+  position: absolute;
+  top: 30%;
+  left: calc(1rem + 2vw);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  text-decoration: none;
+  z-index: 1;
+
+  &.a {
+    /* Additional styles for the 'a' tag */
+  }
+`;
 const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
@@ -133,6 +162,8 @@ const Main = () => {
 
   const handleClick = () => setClick(!click);
 console.log(click)
+
+
   return (
     
     <MainContainer>
@@ -154,8 +185,8 @@ console.log(click)
           </span>
         </Center>
 
-        <Contact target="_blank" href="prem24.dev@gmail.com">
-          {/* <motion.h2
+        <Contact target="_blank" href="https://www.linkedin.com/in/prem-kumar-04b15a227/">
+          <motion.h2
                 initial={{
                     y:-200,
                     transition: { type:'spring', duration: 1.5, delay:1}
@@ -169,7 +200,7 @@ console.log(click)
                 
                 >
                     Say hi..
-                </motion.h2> */}
+                </motion.h2>
         </Contact>
         <BLOG to="/blog">
           <motion.h2
@@ -203,6 +234,38 @@ console.log(click)
             Projects
           </motion.h2>
         </WORK>
+
+        <RESUME to="https://drive.google.com/file/d/1EdMG6BipfA_3hqriVLrMV3DDuKOJDPBO/view"  target="_blank"
+  rel="noopener noreferrer" click={click} className="a">
+  <motion.h2
+    initial={{ y: -200, transition: { type: "spring", duration: 1.5, delay: 1 } }}
+    animate={{ y: 0, transition: { type: "spring", duration: 1.5, delay: 1 } }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    Resume
+  </motion.h2>
+</RESUME>
+
+{/* <RESUME onClick={handleResumeDownload} target="_blank">
+  <motion.h2
+    initial={{
+      y: -200,
+      transition: { type: "spring", duration: 1.5, delay: 1 },
+    }}
+    animate={{
+      y: 0,
+      transition: { type: "spring", duration: 1.5, delay: 1 },
+    }}
+    whileHover={{ scale: 1.1 }}
+    whileTap={{ scale: 0.9 }}
+  >
+    Resume
+  </motion.h2>
+</RESUME> */}
+
+
+       
         <BottomBar>
           <ABOUT to="/about" click={+click}>
             <motion.h2

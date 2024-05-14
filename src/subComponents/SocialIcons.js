@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Behance, Upwork, Dribble } from "../components/AllSvgs";
+import { Github, Behance, Upwork, Dribble,Linkedin } from "../components/AllSvgs";
 
 const Icons = {
   display: "flex",
   flexDirection: "column",
-  gap:"20px",
+  gap:"12px",
   alignItems: "center",
   position: "fixed",
   bottom: "0px",
@@ -16,7 +16,7 @@ const Icons = {
 const Line = () => {
   const lineStyle = {
     width: "3px",
-    height: "120px",
+    height: "100px",
     backgroundColor:"#302E31"
   };
 
@@ -76,6 +76,18 @@ const SocialIcons = ({  color }) => {
           onClick={() => window.open("https://dribbble.com/prem123423", "_blank")}
         >
           <Dribble color={color} />
+        </div>
+      </motion.div>
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: [0, 1, 1.5, 1] }}
+        transition={{ type: "spring", duration: 1, delay: 1.6 }}
+      >
+        <div
+          style={{ color: "inherit", cursor: "pointer" }}
+          onClick={() => window.open("https://dribbble.com/prem123423", "_blank")}
+        >
+          <Linkedin color={color} />
         </div>
       </motion.div>
 

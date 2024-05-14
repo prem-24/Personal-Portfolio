@@ -1,4 +1,4 @@
-import { BiChevronsLeft,BiLogoGithub,BiLogoBehance,BiLogoUpwork } from "react-icons/bi";
+import { BiChevronsLeft,BiLogoLinkedin,BiLogoGithub,BiLogoBehance,BiLogoUpwork } from "react-icons/bi";
 import './AllSvg.css'
 // import { DarkTheme,lightTheme } from "./Themes";
 import { PiDribbbleLogoBold } from "react-icons/pi";
@@ -23,6 +23,11 @@ export const Behance = ({color}) => {
       )
 }
 
+export const Linkedin = ({color}) => {
+  return (
+    < BiLogoLinkedin  className={color} />
+    )
+}
 export const Upwork = ({color}) => {
     return (
       < BiLogoUpwork  className={color} />
