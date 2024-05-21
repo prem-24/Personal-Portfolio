@@ -22,7 +22,7 @@ const MainContainer = styled.div`
   h5,
   h6 {
     font-family: "Karla", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
   }
 `;
 
@@ -117,6 +117,15 @@ to{
     transform: rotate(360deg);
 }
 `;
+const SocialIconWrapper = styled.div`
+ 
+
+  @media (max-width: 400px) {
+    background-color: red;
+    // display:none;
+   
+  }
+`;
 
 const Center = styled.button`
   position: absolute;
@@ -142,6 +151,13 @@ const Center = styled.button`
     display: ${(props) => (props.click ? "none" : "inline-block")};
     padding-top: 1rem;
   }
+  @media (max-width: 400px) {
+    // box-sizing: border-box;
+  //  padding:50px;
+    // background-color: black;
+    // transform: translate(-50%, -50%);
+   
+  }
 `;
 
 const DarkDiv = styled.div`
@@ -155,6 +171,12 @@ const DarkDiv = styled.div`
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
 `;
+
+// const SocialIconsWrapper = styled.div`
+//   @media (max-width: 400px) {
+  
+//   }
+// `;
 
 const Main = () => {
 
@@ -171,9 +193,15 @@ console.log(click)
       <Container>
         <PowerButton />
         <LogoComponent theme={click ? "dark" : "light"} />
-        <SocialIcons color={"dark"}/>
+
+        {/* <SocialIconsWrapper> */}
+      <SocialIconWrapper>
+      <SocialIcons color="dark" />
+      </SocialIconWrapper>
+    {/* </SocialIconsWrapper> */}
 
         <Center click={click}>
+          
           <YinYang
             onClick={() => handleClick()}
             width={click ? 120 : 200}

@@ -33,7 +33,14 @@ animation: ${float} 4s ease infinite;
 img{
     width: 100%;
     height: auto;
+    
 }
+@media (max-width: 400px) {
+    // background-color: black;
+    top: 25%;
+    right: -10%;
+    width: 35vw;
+  }
 `
 const Main =  styled.div`
   border: 2px solid ${(props) => props.theme.text};
@@ -54,6 +61,16 @@ const Main =  styled.div`
   top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+
+  @media (max-width: 400px) {
+    // background-color: black;
+
+    padding: 1rem;
+    width: 50%;
+    height: auto;
+    left: calc(4rem + 2vw);
+    top: 15rem;
+  }
 `
 
 

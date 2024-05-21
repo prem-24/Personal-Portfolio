@@ -36,9 +36,10 @@ background-size: 100% 2px;
 
 `
 const SubBox = styled.div`
-width: 50%;
+width: 100%;
 position: relative;
 display: flex;
+// flex-direction:row;
 
 .pic{
     position: absolute;

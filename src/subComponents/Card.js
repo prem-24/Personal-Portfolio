@@ -7,32 +7,33 @@ import { Github } from '../components/AllSvgs';
 
 
 const Box = styled(motion.li)`
-width: 16rem;
-height: 40vh;
-background-color: ${props => props.theme.text};
-color:${'#302E31'};
-padding: 1.5rem 2rem;
-margin-right: 8rem;
-border-radius:10px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-border: 1px solid ${props => props.theme.body};
-transition: all 0.2s ease;
+box-sizing: border-box;
+  width: 100%;
+//   height: 40vh;
+  background-color: ${props => props.theme.text};
+  color: #302E31;
+  padding: 1rem 1rem;
+  gap:20px;
+  border-radius: 30px;
+  display: grid; /* Changed from flex to grid */
 
-&:hover{
-background-color: ${props => props.theme.body};
-color:${props => props.theme.text};
-border: 1px solid ${props => props.theme.text};
+align-items:center;
+  border: 1px solid ${props => props.theme.body};
+  transition: all 0.2s ease;
 
-}
-`
+  &:hover {
+    background-color: ${props => props.theme.body};
+    color: ${props => props.theme.text};
+    border: 1px solid ${props => props.theme.text};
+  }
+`;
+
 const Title = styled.h2`
-font-size: calc(1em + 0.5vw);
+font-size: calc(.8em + 0.5vw);
 `
 
 const Description = styled.h2`
-font-size: calc(0.8em + 0.3vw);
+font-size: calc(0.6em + 0.3vw);
 font-family: 'Karla',sans-serif;
 font-weight: 500;
 `
@@ -80,7 +81,14 @@ ${Box}:hover &{
 }
 
 `
-
+const Img = styled.div`
+background-image: ${(props) => `url(${props.img})`};
+width: 100%;
+height: 200px;
+background-size:cover;
+border-radius: 30px;
+background-position: center center;
+}`
 // Framer motion configuration
 const Item = {
     hidden:{
@@ -100,8 +108,10 @@ const Card = (props) => {
     const {id, name, description, tags, demo, github} = props.data;
 
     return (
-        <Box key={id} variants={Item}>
+        <Box key={id} variants={Item} style={props.style}>
             <Title>{name}</Title>
+            <Img img={"https://placehold.jp/150x150.png"}>
+            </Img >
             <Description>
                 {description}
             </Description>

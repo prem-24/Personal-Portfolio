@@ -1,31 +1,32 @@
 // blog data
 
-import url from "../assets/bogImages/statnetics.png"
-
+import statnectics from "../assets/bogImages/statnetics.png"
+import mycaptain from "../assets/Images/mycaptain.png"
+import freelance from "../assets/Images/FREELANCE.png"
 export const Blogs = [
     {
         id:1,
         name:"Internship at Statnetics: A transformative journey blending Front-End development and UI/UX design, contributing to product enhancement and user traffic, fostering personal and professional growth.",
         tags:["HTML","CSS","BOOTSTRAP","JS","REACT"],
         date:"04-August-2023",
-        imgSrc:url,
+        imgSrc:statnectics,
         link:"https://medium.com/@prem2452000/my-journey-at-statnetics-a-dive-into-web-development-and-ui-ux-design-31421c4eda03"
     },
     {
         id:2,
-        name:"How to create React Hamburger Menu using Styled-Components",
-        tags:["react","styled-components"],
-        date:"5 July, 2021",
-        imgSrc:"https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625479747640%2F7KzwP9nmj.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-        link:"https://codebucks.hashnode.dev/react-hamburger-menu"
+        name:"Embarked on a transformative journey into UI/UX design at MyCaptain, honing skills in design fundamentals, product design methodologies, and real-world project execution.",
+        tags:["UI","UX","HTML","CSS"],
+        date:"1 December, 2022",
+        imgSrc:mycaptain,
+        link:"https://medium.com/@prem2452000/my-journey-into-ui-ux-design-3058362ab692"
     },
     {
         id:3,
-        name:"React Loading Screen: Try these 3 cool loading screens for your app",
-        tags:["react","react-lottie","styled-components"],
-        date:"6 July, 2021",
-        imgSrc:"https://codebucks.hashnode.dev/_next/image?url=https%3A%2F%2Fcdn.hashnode.com%2Fres%2Fhashnode%2Fimage%2Fupload%2Fv1625552344293%2Fegwis0UIX.png%3Fw%3D1600%26h%3D840%26fit%3Dcrop%26crop%3Dentropy%26auto%3Dcompress%2Cformat%26format%3Dwebp&w=1920&q=75",
-        link:"https://codebucks.hashnode.dev/react-loading-screens"
+        name:"My journey as a freelance web developer has been an exhilarating adventure of tackling complex projects, continuous learning, and achieving new heights in the dynamic tech industry.",
+        tags:["REACT","JS","HTML","CSS","UI/UX","BOOTSTRAP"," TAILWINDS"],
+        date:"12 Jan, 2024",
+        imgSrc:freelance,
+        link:"https://medium.com/@prem2452000/my-journey-as-a-freelance-developer-4f4fb61d2189"
     },
     {
         id:4,

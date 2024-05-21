@@ -17,6 +17,16 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 800px) {
+    // background-color: black;
+    width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  margin-top:80px;
+  
+  }
+ 
 `;
 
 const Main = styled.div`
@@ -39,6 +49,20 @@ const Main = styled.div`
   &:hover {
     color: ${(props) => props.theme.body};
     background-color: ${(props) => props.theme.text};
+  }
+
+  @media (max-width: 400px) {
+    width: 70vw;
+  height: 50vh;
+  margin-top:50px;
+  
+  }
+  @media (max-width: 800px) {
+    // background-color: black;
+    width: 70vw;
+    height: 50vh;
+    margin-top:50px;
+  
   }
 `;
 
@@ -77,16 +101,23 @@ const Description = styled.div`
     margin-left: 2rem;
   }
 `;
+const SocialIconsWrapper = styled.div`
+  display: none;
+`;
 
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <Box>
         <LogoComponent theme="light" />
-        <SocialIcons color="dark" />
-        <PowerButton />
+        <SocialIconsWrapper>
+        <SocialIcons color="dark" />  <PowerButton />
+
+        </SocialIconsWrapper>
+       <PowerButton/>
         <ParticleComponent theme="light" />
-        <Main>
+       {/* <Grid > */}
+       <Main>
           <Title>
             <Design width={40} height={40} /> UI/UX Designer
           </Title>
@@ -132,6 +163,7 @@ const MySkillsPage = () => {
             <p>VScode, Github, Git, PostMan, etc..</p>
           </Description>
         </Main>
+       {/* </Grid> */}
         
 
         <BigTitle text="SKILLS" top="80%" right="30%" />

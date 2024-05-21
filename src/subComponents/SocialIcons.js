@@ -1,22 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Behance, Upwork, Dribble,Linkedin } from "../components/AllSvgs";
+import { Github, Behance, Upwork, Dribble, Linkedin } from "../components/AllSvgs";
+import styled from 'styled-components';
 
-const Icons = {
-  display: "flex",
-  flexDirection: "column",
-  gap:"12px",
-  alignItems: "center",
-  position: "fixed",
-  bottom: "0px",
-  left: "2rem",
-  zIndex: 3,
-};
+const IconsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  left: 2rem;
+  z-index: 3;
+
+  @media (max-width: 400px) {
+    // background-color: red;
+    gap: 5px;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: .5rem;
+  }
+`;
 
 const Line = () => {
   const lineStyle = {
     width: "3px",
-    height: "100px",
+    height: "90px",
     backgroundColor:"#302E31"
   };
 
@@ -25,9 +35,9 @@ const Line = () => {
   transition={{ type: "spring", duration: 0.5, delay: 1 }}></motion.span>;
 };
 
-const SocialIcons = ({  color }) => {
+const SocialIcons = ({ color }) => {
   return (
-    <div style={Icons}>
+    <IconsWrapper>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -85,14 +95,13 @@ const SocialIcons = ({  color }) => {
       >
         <div
           style={{ color: "inherit", cursor: "pointer" }}
-          onClick={() => window.open("https://dribbble.com/prem123423", "_blank")}
+          onClick={() => window.open("https://www.linkedin.com/in/prem-sawant-637326186/", "_blank")}
         >
           <Linkedin color={color} />
         </div>
       </motion.div>
-
       <Line  />
-    </div>
+    </IconsWrapper>
   );
 };
 

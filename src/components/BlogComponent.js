@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Box = styled(motion.a)`
-  width: calc(20rem + 15vw);
+  width: calc(20rem + 10vw);
   text-decoration: none;
   height: 25rem;
   padding: 1.5rem;
@@ -24,6 +24,20 @@ const Box = styled(motion.a)`
     background-color: ${(props) => props.theme.text};
     transition: all 0.3s ease;
   }
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+   
+  
+  }
+  @media (max-width: 400px) {
+    // background-color: black;
+    width: 80%;
+    // height: auto;
+    // margin:20px
+  
+  }
+  }
 `;
 
 const Image = styled.div`
@@ -36,6 +50,12 @@ const Image = styled.div`
 
   ${Box}:hover & {
     border: 1px solid ${(props) => props.theme.body};
+  }
+  @media (max-width: 400px) {
+   
+    width: 100%;
+    height: 70%;
+    // background-size:fit;
   }
 `;
 const Title = styled.h3`

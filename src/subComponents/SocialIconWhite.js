@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 import {
   Github,
@@ -8,16 +9,22 @@ import {
   Linkedin,
 } from "../components/AllSvgs";
 import "../components/AllSvg.css";
-const Icons = {
-  display: "flex",
-  flexDirection: "column",
-  gap: "10px",
-  alignItems: "center",
-  position: "fixed",
-  bottom: "0px",
-  left: "2rem",
-  zIndex: 3,
-};
+
+// Define a styled component for the Icons container
+const IconsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 2rem;
+  z-index: 3;
+
+  @media (max-width: 450px) {
+    left: .2rem;
+  }
+`;
 
 const Line = () => {
   const lineStyle = {
@@ -37,7 +44,7 @@ const Line = () => {
 
 const SocialIcons = ({ color }) => {
   return (
-    <div style={Icons}>
+    <IconsContainer>
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: [0, 1, 1.5, 1] }}
@@ -111,7 +118,7 @@ const SocialIcons = ({ color }) => {
       </motion.div>
 
       <Line />
-    </div>
+    </IconsContainer>
   );
 };
 
