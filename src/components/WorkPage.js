@@ -16,7 +16,7 @@ const Box = styled.div`
   width: 100vw;
   position: relative;
   @media (max-width: 450px) {
-    height: 400vh;
+    height: 500vh;
   }
  
 `;

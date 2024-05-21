@@ -22,7 +22,7 @@ const Box = styled.div`
     width: 100%;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  height: 170vh;
   margin-top:80px;
   
   }
@@ -55,6 +55,7 @@ const Main = styled.div`
     width: 70vw;
   height: 50vh;
   margin-top:50px;
+  // background-color: black;
   
   }
   @media (max-width: 800px) {

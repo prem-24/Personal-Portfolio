@@ -69,7 +69,7 @@ const Main =  styled.div`
     width: 50%;
     height: auto;
     left: calc(4rem + 2vw);
-    top: 15rem;
+    top: 8rem;
   }
 `
 

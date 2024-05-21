@@ -26,6 +26,10 @@ align-items:center;
     color: ${props => props.theme.text};
     border: 1px solid ${props => props.theme.text};
   }
+  @media (max-width: 400px) {
+    border-radius: 10px;
+
+  }
 `;
 
 const Title = styled.h2`
