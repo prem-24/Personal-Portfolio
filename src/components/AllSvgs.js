@@ -43,6 +43,7 @@ export const Dribble = ({color}) => {
 export const YinYang = (props) => {
     return (
         <svg
+      
           aria-hidden="true"
           data-prefix="fas"
           data-icon="yin-yang"

@@ -121,7 +121,7 @@ const SocialIconWrapper = styled.div`
  
 
   @media (max-width: 400px) {
-    background-color: red;
+    // background-color: red;
     // display:none;
    
   }
@@ -308,7 +308,7 @@ console.log(click)
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              About.
+              About
             </motion.h2>
           </ABOUT>
           <SKILLS to="/skills">
@@ -324,7 +324,7 @@ console.log(click)
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              My Skills.
+              Skills
             </motion.h2>
           </SKILLS>
         </BottomBar>

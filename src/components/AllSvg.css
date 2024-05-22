@@ -8,6 +8,33 @@ border-radius: 50%;
 width: 2rem;
 height: 2rem;
 }
+
+@media (max-width: 500px) {
+    /* Styles for viewports below 400px */
+    .dark {
+        display: flex;
+        /* font-size: 24px; */
+        color: #302E31;
+        padding: 0.3rem;
+    border-radius: 50%;
+    /* border: 2px solid #555555; */
+    width: 1.5rem;
+    height: 1.5rem;
+    }
+
+    .light{
+        
+    width: 1.2rem;
+    height: 1.2rem;
+        /* background-color: #FCF6F4; */
+    
+    }
+    .prefix__svg-inline--fa {
+        /* background-color: #FFAB90; */
+        height: 130px;
+        width: 130px;
+    }
+}
 .dark:hover{
 
     background-color: #FFAB90;

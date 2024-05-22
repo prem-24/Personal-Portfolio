@@ -13,11 +13,12 @@ const IconsWrapper = styled.div`
   left: 2rem;
   z-index: 3;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     gap: 5px;
     align-items: center;
-    bottom: 0px;
-    left: 0.5rem;
+    bottom: 15px;
+    left: 1rem;
+   
   }
 `;
 
@@ -26,10 +27,10 @@ const StyledLine = styled(motion.span)`
   height: 90px;
   background-color: #302E31;
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     width: 2px;
-    height: 30px;
-
+    height: 0px;
+   
   }
 `;
 
