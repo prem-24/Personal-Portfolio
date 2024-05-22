@@ -36,11 +36,11 @@ const Container = styled.div`
 const Center = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   padding-top: 10rem;
 
   @media (max-width: 1200px) {
-    width: 100%; /* Adjust width to fit a single column layout */
+    // width: 100%; /* Adjust width to fit a single column layout */
     //
     flex-direction: column; 
   }
@@ -59,7 +59,7 @@ const Grid = styled.div`
   @media (max-width: 400px) {
     // background-color: red;
     // text-align:center;
-    margin-left:20px;
+    // margin-left:20px;
     width: 100vw;
     // justify-content: center !important;
     // align-items: center;
@@ -81,6 +81,11 @@ const SocialIconsWrapper = styled.div`
   @media (max-width: 400px) {
     display: none;
   }
+  @media (min-width: 400px) and (max-width: 750px) {
+
+    display: none;
+
+}
 `;
 
 

@@ -4,10 +4,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Box = styled(motion.a)`
+box-sizing: border-box;
   width: calc(20rem + 10vw);
   text-decoration: none;
   height: 25rem;
-  padding: 1.5rem;
+  padding: 20px;
+  box-sizing: border-box;
   color: ${(props) => props.theme.text};
   border: 3px solid #3C3C3C;
   backdrop-filter: blur(2px);
@@ -32,12 +34,11 @@ const Box = styled(motion.a)`
   }
   @media (max-width: 400px) {
     // background-color: black;
-    width: 80%;
-    // height: auto;
-    // margin:20px
+    // width: 100%;
+    padding: 5px;
   
   }
-  }
+
 `;
 
 const Image = styled.div`
@@ -55,7 +56,7 @@ const Image = styled.div`
    
     width: 100%;
     height: 70%;
-    // background-size:fit;
+    // 
   }
 `;
 const Title = styled.h3`
@@ -80,7 +81,16 @@ const Date = styled.span`
   padding: 0.5rem 0;
 `;
 
-const Container = styled(motion.div)``;
+const Container = styled(motion.div)`
+@media (max-width: 400px) {
+   
+  // background-color:black;
+  display:flex;
+  justify-content:center;
+  padding: 0.5rem;
+}
+
+`;
 
 // Framer motion configuration
 const Item = {
