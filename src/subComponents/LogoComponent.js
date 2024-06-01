@@ -13,9 +13,10 @@ font-family: 'Pacifico',cursive;
 position: fixed;
 left: 2rem;
 top: 2rem;
-z-index:3;
+z-index:1;
 @media (max-width: 450px) {
-  left: 1rem;
+  font-size:24px;
+  left: 4px;
 top: 1rem;
 }
 `

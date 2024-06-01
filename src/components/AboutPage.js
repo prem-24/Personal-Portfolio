@@ -91,11 +91,13 @@ const AboutPage = () => {
             <img src={world} alt="spaceman" />
         </Spaceman>    
         <Main>
-        I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
+        I'm a frontend developer, and my passion lies in creating digital experiences that are both simple and beautiful, ensuring that every website I build offers users an exceptional journey.
+
+
 <br /> <br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
+I'm driven by a deep curiosity, constantly immersing myself in the frontend stack, exploring new techniques, and taking on ambitious projects.
 <br/> <br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
+Apart from coding, I enjoy the freedom of freelancing, drawing inspiration from the endless world of literature. For me, coding is an art form where each line represents an opportunity for creativity and innovation. Let's connect and explore the world of technology together through my social links.
         </Main>
 
         {/* <BigTitle text="ABOUT" top="10%" left="5%" /> */}

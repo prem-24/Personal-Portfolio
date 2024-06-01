@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 import LogoComponent from "../subComponents/LogoComponent";
-import PowerButton from "../subComponents/PowerButton";
+// import PowerButton from "../subComponents/PowerButton";
+import IntroPowerBtn from "../subComponents/Intropage";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
@@ -51,11 +52,16 @@ const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: calc(1rem + 2vw);
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
   z-index: 1;
+  @media (max-width: 400px) {
+    // background-color: red;
+    top: 55%;
+   
+  }
 `;
 
 
@@ -77,7 +83,7 @@ const WORK = styled(NavLink)`
 const RESUME = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: calc(1rem + 2vw);
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
@@ -85,6 +91,11 @@ const RESUME = styled(NavLink)`
 
   &.a {
     /* Additional styles for the 'a' tag */
+  };
+  @media (max-width: 400px) {
+    // background-color: red;
+    top: 35%;
+   
   }
 `;
 const BottomBar = styled.div`
@@ -191,7 +202,7 @@ console.log(click)
     <MainContainer>
       <DarkDiv click={click} />
       <Container>
-        <PowerButton />
+        <IntroPowerBtn />
         <LogoComponent theme={click ? "dark" : "light"} />
 
         {/* <SocialIconsWrapper> */}
@@ -213,7 +224,7 @@ console.log(click)
           </span>
         </Center>
 
-        <Contact target="_blank" href="https://www.linkedin.com/in/prem-kumar-04b15a227/">
+        <Contact target="_blank" href="https://wa.me/9894906630">
           <motion.h2
                 initial={{
                     y:-200,

@@ -12,9 +12,9 @@ box-sizing: border-box;
 //   height: 40vh;
   background-color: ${props => props.theme.text};
   color: #302E31;
-  padding: 1rem 1rem;
-  gap:20px;
-  border-radius: 30px;
+  padding: .5rem .5rem;
+  gap:10px;
+  border-radius: 20px;
   display: grid; /* Changed from flex to grid */
 
 align-items:center;
@@ -90,7 +90,7 @@ background-image: ${(props) => `url(${props.img})`};
 width: 100%;
 height: 200px;
 background-size:cover;
-border-radius: 30px;
+border-radius: 15px;
 background-position: center center;
 }`
 // Framer motion configuration
@@ -109,12 +109,12 @@ const Item = {
 
 const Card = (props) => {
 
-    const {id, name, description, tags, demo, github} = props.data;
+    const {id, name, description, tags, demo, github,img} = props.data;
 
     return (
         <Box key={id} variants={Item} style={props.style}>
-            <Title>{name}</Title>
-            <Img img={"https://placehold.jp/150x150.png"}>
+            {/* <Title>{name}</Title> */}
+            <Img img={img}>
             </Img >
             <Description>
                 {description}

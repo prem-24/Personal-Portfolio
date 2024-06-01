@@ -12,38 +12,36 @@ import { YinYang } from "./AllSvgs";
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
-  height: 200vh;
+  height: 600vh;
   width: 100vw;
   position: relative;
   @media (max-width: 450px) {
     height: 500vh;
   }
- 
 `;
 
 const MainWrapper = styled.div`
-// background-color: ${(props) => props.theme.body};
-height: 200vh;
-width: 100vw;
+  // background-color: ${(props) => props.theme.body};
+  height: 100%;
+  width: 100vw;
 
-display: flex;
-justify-content: center;
-align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
-
 
 const Main = styled(motion.ul)`
   box-sizing: border-box;
   padding: 30px;
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   // left: 5%;
   // right: 5%;
   width: 80vw;
 
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
+
   gap: 20px;
   justify-items: center;
   color: white;
@@ -52,12 +50,12 @@ const Main = styled(motion.ul)`
     grid-template-columns: 1fr 1fr;
     // background-color: red;
   }
-  @media (max-width: 450px) {
+  @media (max-width: 750px) {
     top: 4rem;
-   display:flex;
-   flex-direction:column;
-   gap:50px;
-   width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 80vw;
     // background-color: blue;
   }
 `;
@@ -71,14 +69,13 @@ const Rotate = styled.span`
   height: 80px;
   z-index: 1;
   @media (max-width: 450px) {
- 
-   display:none;
+    display: none;
   }
 `;
 
 // const SocialIconsWrapper = styled.div`
 // @media (max-width: 450px) {
- 
+
 //   display:none;
 //  }
 
@@ -91,9 +88,17 @@ const Cardthree = {
 const CardFive = {
   gridColumn: "span 2",
   alignItems: "center",
-  
 };
 
+const CardEight = {
+  gridColumn: "span 2",
+  alignItems: "center",
+};
+
+const twelve = {
+  gridColumn: "span 2",
+  alignItems: "center",
+}
 
 // Framer-motion Configuration
 const container = {
@@ -112,9 +117,9 @@ const WorkPage = () => {
   const yinyang = useRef(null);
 
   useEffect(() => {
-    console.log('Screen width:', window.innerWidth);
+    console.log("Screen width:", window.innerWidth);
     if (window.innerWidth <= 1300) {
-      console.log('Applying media query styles');
+      console.log("Applying media query styles");
     }
   }, []);
 
@@ -125,27 +130,36 @@ const WorkPage = () => {
         {/* <SocialIconsWrapper> */}
         <SocialIconWhite color="light" />
         {/* </SocialIconsWrapper> */}
-       
+
         <PowerButton />
 
-      <MainWrapper>
-      <Main ref={ref} variants={container} initial="hidden" animate="show">
-          {Work.map((d) => (
-            <Card
-              key={d.id}
-              data={d}
-              style={d.id === 3 ? Cardthree : d.id === 4 ? CardFive : {}}
-              
-            />
-          ))}
-        </Main>
-      </MainWrapper>
+        <MainWrapper>
+          <Main ref={ref} variants={container} initial="hidden" animate="show">
+            {Work.map((d) => (
+              <Card
+                key={d.id}
+                data={d}
+                style={
+                  d.id === 3
+                    ? Cardthree
+                    : d.id === 4
+                    ? CardFive
+                    : d.id === 9
+                    ? CardEight
+                    :d.id === 10
+                    ? twelve
+                    : {}
+                }
+              />
+            ))}
+          </Main>
+        </MainWrapper>
 
-      {/* <RotateWrapper> */}
-      <Rotate  ref={yinyang}>
+        {/* <RotateWrapper> */}
+        <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-      {/* </RotateWrapper> */}
+        {/* </RotateWrapper> */}
       </Box>
     </ThemeProvider>
   );

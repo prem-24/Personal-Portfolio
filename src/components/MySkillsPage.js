@@ -161,7 +161,7 @@ const MySkillsPage = () => {
           </Description>
           <Description>
             <strong>Tools</strong>
-            <p>VScode, Github, Git, PostMan, etc..</p>
+            <p>VScode, Github, Git, PostMan</p>
           </Description>
         </Main>
        {/* </Grid> */}
