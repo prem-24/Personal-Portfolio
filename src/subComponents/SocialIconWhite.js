@@ -22,7 +22,7 @@ const IconsContainer = styled.div`
   z-index: 3;
 
   @media (max-width: 450px) {
-    left: .2rem;
+    left: 0.2rem;
   }
 `;
 
@@ -110,7 +110,10 @@ const SocialIcons = ({ color }) => {
         <div
           style={{ color: "inherit", cursor: "pointer" }}
           onClick={() =>
-            window.open("https://dribbble.com/prem123423", "_blank")
+            window.open(
+              "https://www.linkedin.com/in/prem-kumar-04b15a227/",
+              "_blank"
+            )
           }
         >
           <Linkedin color={color} />

@@ -81,7 +81,7 @@ export const Work = [
       "Showcase your design finesse with a stunning UI portfolio, highlighting your creative vision and expertise",
     tags: ["html", "css", "bootstrap" ,"javascript"],
     img:workimg.portfoio,
-    demo: "http://react-responsive-navbar-codebucks27.vercel.app/",
+    demo: "https://premsportfoloios.netlify.app/",
     github: "https://github.com/prem-24/personal-portfolio-",
   },
   {
@@ -92,7 +92,7 @@ export const Work = [
     tags: ["html","css", "javascript",  "react", "react-router", "bootstrap", "UI & UX"],
     img:workimg.cloudQa,
     demo: "https://app.cloudqa.io/Account/Register?source=MainHeader",
-    github: "https://github.com/codebucks27/React-responsive-navbar",
+    github: "#",
   },
   {
     id: 10,
