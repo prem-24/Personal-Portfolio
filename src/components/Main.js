@@ -274,7 +274,7 @@ console.log(click)
           </motion.h2>
         </WORK>
 
-        <RESUME to="https://drive.google.com/file/d/1EdMG6BipfA_3hqriVLrMV3DDuKOJDPBO/view"  target="_blank"
+        <RESUME to="https://drive.google.com/file/d/1CzkaCK8M6zcAH5fkEBG3ut3xP3v-7ery/view"  target="_blank"
   rel="noopener noreferrer" click={click} className="a">
   <motion.h2
     initial={{ y: -200, transition: { type: "spring", duration: 1.5, delay: 1 } }}

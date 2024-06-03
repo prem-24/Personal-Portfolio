@@ -3,6 +3,7 @@
 import statnectics from "../assets/bogImages/statnetics.png"
 import mycaptain from "../assets/Images/mycaptain.png"
 import freelance from "../assets/Images/FREELANCE.png"
+import DesiQna from "../assets/bogImages/DesiQna.png"
 export const Blogs = [
     {
         id:1,
@@ -34,8 +35,8 @@ export const Blogs = [
         tags: ["HTML ", "CSS ", "JavaScript ", "React ", "Node.js ", "Express ",
          "MongoDB ", "Tailwind ", "DSA "],
         date:"20jan,2024",
-        imgSrc:"#",
-        link:""
+        imgSrc:DesiQna,
+        link:"#"
     },
     {
         id:5,
